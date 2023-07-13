@@ -19,9 +19,9 @@ export interface ManufacturerProps{
     setManufacturer: (manufacturer: string) => void;
 }
 export interface CarProps{
-    city_mpg:number;
-    class:string;
-    combination_mpg:number;
+city_mpg:number;
+class:string;
+combination_mpg:number;
 cylinders:number;
 displacement:number;
 drive:string;
@@ -34,6 +34,6 @@ year:number;
 }
 export interface CarDetailProps{
     isOpen:boolean;
-    closeModal: (isOpen:boolean)=>void
+    closeModal: ()=>void
     car:CarProps
 }
