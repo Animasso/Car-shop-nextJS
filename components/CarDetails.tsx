@@ -1,10 +1,10 @@
 "use client"
 import React, { Fragment } from 'react'
 import Image from 'next/image'
-
+import { generateCarImageUrl } from '@/utils'
 import { CarDetailProps } from '@/types'
 import { Dialog, Transition } from '@headlessui/react'
-import { relative } from 'path'
+
 const CarDetails = ({ isOpen, closeModal, car }: CarDetailProps) => {
     return (
         <>
@@ -36,19 +36,19 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailProps) => {
                                         </button>
                                         <div className=' flex-1 flex flex-col gap-3'>
                                             <div className=' relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg'>
-                                                <Image src={'/hero.png'} alt='auto' fill priority className=' object-contain' />
+                                                <Image src={generateCarImageUrl(car)} alt='auto' fill priority className=' object-contain' />
                                             </div>
                                             <div className=' flex gap-3'>
                                                 <div className=' flex-1 relative w-full rounded-lg h-24 bg-primary-blue-100 '>
-                                                    <Image src={'/hero.png'} alt='auto' fill priority className=' object-contain' />
+                                                    <Image src={generateCarImageUrl(car, '29')} alt='auto' fill priority className=' object-contain' />
 
                                                 </div>
                                                 <div className=' flex-1 relative w-full rounded-lg h-24 bg-primary-blue-100 '>
-                                                    <Image src={'/hero.png'} alt='auto' fill priority className=' object-contain' />
+                                                    <Image src={generateCarImageUrl(car, '33')} alt='auto' fill priority className=' object-contain' />
 
                                                 </div>
                                                 <div className=' flex-1 relative w-full rounded-lg h-24 bg-primary-blue-100 '>
-                                                    <Image src={'/hero.png'} alt='auto' fill priority className=' object-contain' />
+                                                    <Image src={generateCarImageUrl(car, '13')} alt='auto' fill priority className=' object-contain' />
 
                                                 </div>
                                             </div>
