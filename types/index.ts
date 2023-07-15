@@ -11,8 +11,15 @@ export interface CustomButtonProps{
     type?:"button" | "submit" ;
     handleClick?:MouseEventHandler<HTMLButtonElement>
 }
+//to make a key value interface
+export interface optionsProps{
+    title :string,
+    value:string
+}
+
 export interface CustomFilterProps{
     title: string;
+    options:optionsProps[]
 }
 export interface ManufacturerProps{
     manufacturer : string;
@@ -36,4 +43,11 @@ export interface CarDetailProps{
     isOpen:boolean;
     closeModal: ()=>void
     car:CarProps
+}
+export interface FilterProps{
+    manufacturer:string,
+    year:number,
+    fuel:string,
+    limit:number,
+    model:string
 }
